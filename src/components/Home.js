@@ -1,5 +1,8 @@
 //import { useNavigate } from "react-router-dom"; // No es necesario si se usa el ProtectedRoute
 import { useAuth } from "../context/authContext";
+import { Products } from "../services/getProducts";
+//import { async } from "@firebase/util";
+
 
 
 
@@ -19,5 +22,8 @@ export function Home() {
     <h1>Welcome {user.email}</h1>
 
     <button onClick={handleLogout}>LogOut</button>
+
+    <Products/>
+
   </div>);
 }
