@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'; //🤖 Permite crear rutas
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css' //Importamos Bootstrap
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

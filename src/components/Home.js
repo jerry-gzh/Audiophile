@@ -1,10 +1,9 @@
 //import { useNavigate } from "react-router-dom"; // No es necesario si se usa el ProtectedRoute
 import { useAuth } from "../context/authContext";
-import { Products } from "../services/getProducts";
+//import { Products } from "../services/getProducts";
 //import { async } from "@firebase/util";
-
-
-
+//import { Card } from "./Card";
+import Cards from "./Cards";
 
 export function Home() {
 
@@ -23,7 +22,8 @@ export function Home() {
 
     <button onClick={handleLogout}>LogOut</button>
 
-    <Products/>
+    
+    <Cards/>
 
   </div>);
 }

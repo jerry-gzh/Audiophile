@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import axios from "axios";
 
-export function Products() {
+/* export function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,11 +23,23 @@ export function Products() {
           {products.map((prod, i) => {
             return(
               <li key={i}>
-                <h4>Modelo : {prod.Modelo }</h4>
+                <h4>Modelo : {prod.Model}</h4>
+                <h4>Marca : {prod.Brand}</h4>
               </li>
             )
           })}
         </ul>
     </div>
   )
+}
+ */
+
+const allProducts = async (state) => {
+  const request = await axios.get ('https://react-fb-auth-29035-default-rtdb.firebaseio.com/products.json')
+  state(request.data)
+  //console.log(request.data)
+}
+
+export {
+  allProducts
 }
