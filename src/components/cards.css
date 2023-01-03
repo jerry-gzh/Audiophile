@@ -1,0 +1,9 @@
+.card-img-top{
+  height: 50vh;
+  object-fit: scale-down;
+  padding-top: 3vh;
+}
+
+.card{
+  margin: 1rem 0.5rem; 
+}

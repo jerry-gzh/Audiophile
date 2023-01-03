@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Card } from "./Card";
 import { allProducts } from "../services/getProducts";
 
+import './cards.css';
+
 const Cards = () => {
   const [products, setProducts] = useState(null);
 
@@ -12,7 +14,7 @@ const Cards = () => {
   return (
     <>
       {products != null ? (
-        <div className="container d-flex justify-content-center align-items-center h-100">
+        <div className="container d-flex justify-content-center align-items-center h-100 bg-info">
           <div className="row">
             {products.map(({id, Model, Brand, Img_link }) => (
               <div className="col-md-4" key={id}>
