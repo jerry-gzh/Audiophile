@@ -1,6 +1,7 @@
 import { Routes, Route} from 'react-router-dom'; //Definir rutas
 import { Home } from './components/Home';
 import { Login } from './components/Login';
+import { ShopingCart } from './components/ShopingCart'
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { Register } from './components/Register';
 import { AuthProvider } from './context/authContext' //Los componentes dentro de AuthProvider tendrán acceso al user
@@ -14,9 +15,10 @@ function App() {
     <div className='App'>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={ <ProtectedRoute> <Home/> </ProtectedRoute> } />
+          <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path='/shopingCart' element={ <ProtectedRoute> <ShopingCart/> </ProtectedRoute> }/>
         </Routes>
       </AuthProvider>
     </div>

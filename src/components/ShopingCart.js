@@ -1,15 +1,13 @@
 //import { useNavigate } from "react-router-dom"; // No es necesario si se usa el ProtectedRoute
-//import { useAuth } from "../context/authContext";
+import { useAuth } from "../context/authContext";
 //import { Products } from "../services/getProducts";
 //import { async } from "@firebase/util";
 //import { Card } from "./Card";
-import Cards from "./Cards";
+import { Home } from './Home'
 
-export function Home() {
+export function ShopingCart() {
 
-  return (<div>
-
-{/*   const {user, logout, loading} = useAuth()
+  const {user, logout, loading} = useAuth()
   //const navigate = useNavigate()
 
   const handleLogout = async() => {
@@ -22,10 +20,10 @@ export function Home() {
   return (<div>
     <h1>Welcome {user.email}</h1>
 
-    <button onClick={handleLogout}>LogOut</button>  */}
+    <button onClick={handleLogout}>LogOut</button>
 
     
-    <Cards/>
+    <Home/>
 
   </div>);
 }
