@@ -4,6 +4,7 @@
 //import { async } from "@firebase/util";
 //import { Card } from "./Card";
 import Cards from "./Cards";
+import NavBar from "./NavBar";
 
 export function Home() {
 
@@ -24,7 +25,6 @@ export function Home() {
 
     <button onClick={handleLogout}>LogOut</button>  */}
 
-    
     <Cards/>
 
   </div>);
