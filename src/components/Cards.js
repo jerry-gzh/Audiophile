@@ -18,7 +18,7 @@ const Cards = () => {
           <div className="row">
             {products.map(({id, Model, Brand, Img_link }) => (
               <div className="col-md-4" key={id}>
-                <Card Model={Model} Brand={Brand} Img={Img_link}/>
+                <Card Model={Model} Brand={Brand} Img={Img_link} id={id}/>
               </div>
             ))}
           </div>

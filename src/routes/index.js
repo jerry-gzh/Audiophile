@@ -7,6 +7,7 @@ import { Home } from "../components/Home";
 import { Login } from "../components/Login";
 import { Register } from "../components/Register";
 import { ShopingCart } from "../components/ShopingCart";
+import { Item } from "../components/Item";
 
 export default function AllRoutes() {
   return (
@@ -18,6 +19,7 @@ export default function AllRoutes() {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path='/shopingCart' element={ <ProtectedRoute> <ShopingCart/> </ProtectedRoute> }/>
+          <Route path="/item/:id" element={<Item/>} />
         </Routes>
       
     </div>
