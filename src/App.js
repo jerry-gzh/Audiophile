@@ -1,6 +1,7 @@
 
 import AllRoutes from './routes/index';
-import { AuthProvider } from './context/authContext' //Los componentes dentro de AuthProvider tendrán acceso al user
+import { AuthProvider } from './context/authContext'; //Los componentes dentro de AuthProvider tendrán acceso al user
+import { ItemProvider } from './context/itemContext';
 
 import './App.css'
 
@@ -10,7 +11,9 @@ function App() {
   return(  
     <div className='App'>
       <AuthProvider>
-        <AllRoutes/>
+        <ItemProvider>
+          <AllRoutes/>
+        </ItemProvider>
       </AuthProvider>
     </div>
   )

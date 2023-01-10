@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, {  useContext } from "react";
 import { Card } from "./Card";
-import { allProducts } from "../services/getProducts";
+//import { allProducts } from "../services/getProducts";
+import { ItemContext } from "../context/itemContext";
 
 import './cards.css';
 
 const Cards = () => {
-  const [products, setProducts] = useState(null);
+/*   const [products, setProducts] = useState(null);
 
   useEffect(() => {
     allProducts(setProducts);
-  }, []);
+  }, []); */
+
+  const {products} = useContext(ItemContext)
 
   return (
     <>

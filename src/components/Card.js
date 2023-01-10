@@ -3,7 +3,8 @@ import React from 'react';
 export function Card({Brand, Model, Img, id}) {
 
   const selectId = (id)=>{
-    console.log(id)
+    console.log(`desde selectId ${id}`)
+    
   }
   
   return (
