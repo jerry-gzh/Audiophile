@@ -1,4 +1,3 @@
-
 import AllRoutes from './routes/index';
 import { AuthProvider } from './context/authContext'; //Los componentes dentro de AuthProvider tendrán acceso al user
 import { ItemProvider } from './context/itemContext';

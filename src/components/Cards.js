@@ -7,7 +7,7 @@ import './cards.css';
 const Cards = () => {
 
   const {products} = useContext(ItemContext)
-
+  
   return (
     <>
       {products != null ? (
