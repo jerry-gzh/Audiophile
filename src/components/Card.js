@@ -1,11 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Card({Brand, Model, Img, id}) {
-
-  const selectId = (id)=>{
-    console.log(`desde selectId ${id}`)
-    
-  }
   
   return (
     <div className='card'>
@@ -13,7 +9,9 @@ export function Card({Brand, Model, Img, id}) {
       <div className='card-body'>
         <h4 className='card-title'>{Model}</h4>
         <p className='card-text text-secondary'>{Brand}</p>
-        <button onClick={() => {selectId(id)}} className='btn btn-outline-secondary'>Details</button>
+        <Link to= {`/item/:${id}`} >
+          <button  className='btn btn-outline-secondary'>Details</button>
+        </Link>
       </div>
     </div>
   )
