@@ -21,9 +21,9 @@ export function ShopingCart() {
     <h1>Welcome {user.email}</h1>
 
     <button onClick={handleLogout}>LogOut</button>
-
     
-    <Home/>
+    <h1>Carrito de compra</h1>
+    
 
   </div>);
 }
