@@ -1,15 +1,10 @@
-//Disponibilidad de funciones y estados en un contexto
-//Estados que almacenarán el id y cantidad del producto seleccionado para después poder consultarlos en el cart.js
-//Funciones que permitan agregar, disminuir la cantidad de productos relacionados al id
-//11:44 Inicia carrito
-
 import React, { createContext, useState } from "react";
 
-export const CartContext = createContext(null);
+export const CartContext = createContext();
 
-export const CartProvider = (props) => {
+export const CartProvider = ({ children}) => {
   const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
+  //const [total, setTotal] = useState(0);
 
   const addToCart = (item, qty) => {
     if (cart.some((el) => el.id === item.id)) {
@@ -50,7 +45,10 @@ export const CartProvider = (props) => {
         deleteCart,
       }}
     >
-      {props.children}
+      {children}
     </CartContext.Provider>
-  );
-};
+  )
+}
+// Video 21:40
+
+export default CartContext; //Con esto se exportó pero no sé por que 😐

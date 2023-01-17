@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useParams } from "react-router-dom";
+import { CartContext } from '../context/cartContext';
 import { ItemContext } from '../context/itemContext';
 import ItemCount from './ItemCount.jsx';
 
@@ -7,6 +8,9 @@ export function Item() {
   const params = useParams();
   const {products} = useContext(ItemContext);
   const id = ((params.id).slice(1)-1);
+  const cartContext = useContext(CartContext);
+  const {cart, addToCart} = cartContext;
+  console.log(addToCart);
 
   return (
     <div>
