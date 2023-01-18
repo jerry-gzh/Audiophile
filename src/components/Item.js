@@ -10,7 +10,11 @@ export function Item() {
   const id = ((params.id).slice(1)-1);
   const cartContext = useContext(CartContext);
   const {cart, addToCart} = cartContext;
-  console.log(addToCart);
+  //console.log(addToCart);
+
+  const onAdd = (qty)=>{
+    addToCart((products[id]), qty)
+  } 
 
   return (
     <div>
@@ -22,7 +26,7 @@ export function Item() {
           <h2>Impedancia: {(products[id]).Impedance}Ω</h2>
           <h2>Respuesta: {(products[id]).Response}</h2>
           <h2>Precio: ${(products[id]).Price}</h2>
-          <ItemCount initial={1} />
+          <ItemCount initial={1} onAdd={onAdd}/>
         </>
       ) : (
         "No hay productos"

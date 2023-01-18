@@ -17,8 +17,10 @@ export const CartProvider = ({ children}) => {
   
       setCart([...newCart]);
     } else {
-      let product = { ...item, qty };
+      let product = { ...item, qty };//Caract del item + qty seleccionada
       setCart([...cart, product]);
+      console.log(product);
+      console.log(cart);
     }
   };
 

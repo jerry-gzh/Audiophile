@@ -1,9 +1,12 @@
 //import { useNavigate } from "react-router-dom"; // No es necesario si se usa el ProtectedRoute
+import React, { useContext } from "react";
 import { useAuth } from "../context/authContext";
+import CartContext from "../context/cartContext";
+
 //import { Products } from "../services/getProducts";
 //import { async } from "@firebase/util";
 //import { Card } from "./Card";
-import { Home } from './Home'
+//import { Home } from './Home'
 
 export function ShopingCart() {
 
@@ -14,6 +17,9 @@ export function ShopingCart() {
     await logout()
     //navigate("/")
   }
+
+  const cartContext = useContext(CartContext);
+  const { cart } = cartContext;
   
   if (loading) return <h1>Loading...</h1>
 
@@ -23,7 +29,8 @@ export function ShopingCart() {
     <button onClick={handleLogout}>LogOut</button>
     
     <h1>Carrito de compra</h1>
-    
+    <h1>{cart.length}</h1>
 
   </div>);
 }
+export default ShopingCart;
