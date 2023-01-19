@@ -60,8 +60,6 @@ export const CartProvider = ({ children}) => {
     </CartContext.Provider>
   )
 }
-// Video 21:40
 
 export default CartContext; //Con esto se exportó pero no sé por que 😐
 
-//Usar método reduce para hacer "La suma" de los resultados multiplicados por la qty
