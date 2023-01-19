@@ -31,7 +31,7 @@ export function ShopingCart() {
                 );
               })
             }
-            
+
             <h1>TOTAL: ${total}</h1>
             <button 
               className="button-primary button-padding"
@@ -43,4 +43,5 @@ export function ShopingCart() {
     </section>
   </div>);
 }
+
 export default ShopingCart;
