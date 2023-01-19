@@ -21,25 +21,24 @@ export function ShopingCart() {
     
 
     <section className="list-cart-container">
-      {cart ? (
-          cart.map( product => {
-          return(<CartItem key={product.id}
-                item={product} 
-                deleteCartById={deleteCartById}
-              />
-            );
-          })
-        ): <p>cargando productos</p>
-      }
-
-      {cart.length ? (<div>
-            <h1>TOTAL: {total}</h1>
+      {cart.length ? (
+          <div>
+            {cart.map( product => {
+              return(<CartItem key={product.id}
+                    item={product} 
+                    deleteCartById={deleteCartById}
+                  />
+                );
+              })
+            }
+            
+            <h1>TOTAL: ${total}</h1>
             <button 
               className="button-primary button-padding"
               onClick={deleteCart}
             >Vaciar Carrito</button>
-          </div>)
-        : <p>No hay productos en el carrito</p>
+          </div>
+        ) : (<p>No haz añadido productos al carrito</p>)
       }
     </section>
   </div>);
