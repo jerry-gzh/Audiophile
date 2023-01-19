@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import { useAuth } from "../context/authContext";
 import CartContext from "../context/cartContext";
+import CartItem from "./CartItem";
 
 //import { Products } from "../services/getProducts";
 //import { async } from "@firebase/util";
@@ -19,8 +20,12 @@ export function ShopingCart() {
   }
 
   const cartContext = useContext(CartContext);
-  const { cart } = cartContext;
-  
+  const { cart, deleteCartById, deleteCart, total, getTotal } = cartContext;
+  //console.log(cart);
+  //console.log(getTotal());
+  //getTotal();
+  //console.log(total)
+
   if (loading) return <h1>Loading...</h1>
 
   return (<div>
@@ -30,6 +35,26 @@ export function ShopingCart() {
     
     <h1>Carrito de compra</h1>
     <h1>{cart.length}</h1>
+
+    <section className="list-cart-container">
+            {cart ? ( getTotal(),
+                cart.map( product => {
+                return( <CartItem key={product.id} 
+                                  item={product} 
+                                  deleteCartById={deleteCartById} 
+                        /> );
+                })
+                )
+                  : <p>cargando productos</p>
+            }
+            <h1>TOTAL: {total}</h1>
+            {cart.length ? (<button 
+                            className="button-primary button-padding"
+                            onClick={deleteCart}
+                      >Vaciar Carrito</button>)
+                        : <p>No hay productos en el carrito</p>
+            }
+        </section>
 
   </div>);
 }

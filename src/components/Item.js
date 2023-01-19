@@ -9,7 +9,7 @@ export function Item() {
   const {products} = useContext(ItemContext);
   const id = ((params.id).slice(1)-1);
   const cartContext = useContext(CartContext);
-  const {cart, addToCart} = cartContext;
+  const {addToCart} = cartContext;
   //console.log(addToCart);
 
   const onAdd = (qty)=>{
