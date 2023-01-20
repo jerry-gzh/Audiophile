@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Card } from "./Card";
 import { ItemContext } from "../context/itemContext";
 
-import './cards.css';
+import './scss/cards.css';
 
 const Cards = () => {
 
