@@ -3,7 +3,7 @@ import { AuthProvider } from "./context/authContext"; //Los componentes dentro d
 import { ItemProvider } from "./context/itemContext";
 import { CartProvider } from "./context/cartContext";
 
-import "./App.css";
+import "./App.scss";
 
 // classname= bg-slate-300 h-screen text-black flex
 function App() {

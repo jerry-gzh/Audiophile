@@ -5,7 +5,7 @@ import { useState } from 'react';
 const ItemCount = ({ initial, onAdd }) => {
   //hook de estado
   const [qty, setQty] = useState(initial);
-  const [showButton, setshowButton] = useState(false);
+  const [ setshowButton] = useState(false);
 
   const addProduct = (num) => {
     setQty(qty + num);

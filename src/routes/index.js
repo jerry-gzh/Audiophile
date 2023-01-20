@@ -8,6 +8,9 @@ import { Login } from "../components/Login";
 import { Register } from "../components/Register";
 import { ShopingCart } from "../components/ShopingCart";
 import { Item } from "../components/Item";
+import { Shop } from "../components/Shop";
+import { AboutUs } from "../components/AboutUs";
+import { Contact } from "../components/Contact";
 
 export default function AllRoutes() {
   return (
@@ -16,6 +19,9 @@ export default function AllRoutes() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/shop" element={<Shop/>} />
+          <Route path="/aboutus" element={<AboutUs/>} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path='/shopingCart' element={ <ProtectedRoute> <ShopingCart/> </ProtectedRoute> }/>
