@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext }  from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import CartContext from "../context/cartContext";
 import './scss/NavBar.scss';
 import logo from "../resources/logo.png";
 import userLogo from "../resources/userLogo.png";
 import { BiCart } from 'react-icons/bi';
 
 
+
 export default function NavBar() {
-  const {user} = useAuth()
+  const cartContext = useContext(CartContext);
+  const { cart } = cartContext;
+  const index = cart.length;
+  
 
   return(
     <div className="Nav-Bar">
@@ -32,6 +37,9 @@ export default function NavBar() {
         </li>|
         <li>
           <Link to="/shopingCart"><BiCart/></Link>
+        </li>
+        <li id="index-li">
+          {index ? <div id="index">{index}</div> : <div>  </div>}
         </li>
       </ul>
     </div>
