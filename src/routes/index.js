@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route} from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
-
 import NavBar from "../components/NavBar";
 import { Home } from "../components/Home";
 import { Login } from "../components/Login";
@@ -11,12 +10,13 @@ import { Item } from "../components/Item";
 import { Shop } from "../components/Shop";
 import { AboutUs } from "../components/AboutUs";
 import { Contact } from "../components/Contact";
+import './index.scss';
 
 export default function AllRoutes() {
   return (
     <div>
-      
-        <NavBar/>
+      <NavBar/>
+      <div className="wrap-routes">
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/shop" element={<Shop/>} />
@@ -27,7 +27,7 @@ export default function AllRoutes() {
           <Route path='/shopingCart' element={ <ProtectedRoute> <ShopingCart/> </ProtectedRoute> }/>
           <Route path="/item/:id" element={<Item/>} />
         </Routes>
-      
+      </div>
     </div>
   )
 }

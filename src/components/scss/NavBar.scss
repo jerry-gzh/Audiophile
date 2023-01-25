@@ -2,8 +2,11 @@
   background-color: rgb(163, 163, 163) ;
   font-family: 'Comfortaa', cursive;
   display: flex;
-  //position:fixed;
+  position: fixed;
   height: 70px;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 .Nav-Bar img{
@@ -36,7 +39,7 @@
 
 .NB-center li:hover {
   background-color: black;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   border-radius: 5%;
 
     a{
