@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import './scss/login.scss';
 
 export function Login() {
   const [user, setUser] = useState({
@@ -38,24 +39,26 @@ export function Login() {
 
       {error && <p>{error}</p>}
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email</label>
+      <form onSubmit={handleSubmit} className="form-wrap">
+        <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
           placeholder="you@email.com"
           onChange={handleChange}
+          className="input"
         />
 
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           name="password"
           id="password"
           onChange={handleChange}
+          className="input"
         />
 
-        <button>Login</button>
+        <button id="btn-form">Login</button>
       </form>
     </div>
   );
