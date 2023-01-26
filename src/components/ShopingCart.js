@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { useAuth } from "../context/authContext";
 import CartContext from "../context/cartContext";
 import CartItem from "./CartItem";
+import './scss/ShopingCart.scss'
 
 export function ShopingCart() {
 
