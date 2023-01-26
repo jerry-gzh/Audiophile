@@ -38,7 +38,7 @@ const ItemCount = ({ initial, onAdd }) => {
         onClick={() => {onAdd(qty); setshowButton(true)}}
         //disabled={stock === 0 ? true : null}
       >
-        Añadir
+        Add to cart
       </button>
     </div>
   );

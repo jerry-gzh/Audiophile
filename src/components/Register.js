@@ -62,7 +62,7 @@ export function Register() {
       </form>
 
       <div id="link-user">
-        <Link to="/login">Ya tengo cuenta</Link>
+        <Link to="/login">I already have an account</Link>
       </div>
     </div>
   );

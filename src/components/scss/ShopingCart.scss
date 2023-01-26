@@ -80,3 +80,33 @@
   width: 120px;
   text-align: right;
 }
+
+#cart-total{
+  margin: 20px 0 20px;
+  width: calc(70% + 90px);
+  text-align: right;
+  font-family: 'Lato', 'Gill Sans MT', Calibri;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+
+.cart-finish{
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px;
+
+  button{
+    width:200px;
+    margin-inline: 40px;
+  }
+}
+
+#cart-finish{
+  background-color: rgba(4, 91, 91, 0.885);
+}
+
+#cart-clear{
+  background-color: rgba(109, 12, 12, 0.735);
+}

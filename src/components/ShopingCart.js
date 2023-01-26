@@ -33,12 +33,22 @@ export function ShopingCart() {
                 );
               })
             }
-
-            <h1>TOTAL: ${total}</h1>
-            <button 
-              className="button-primary button-padding"
-              onClick={deleteCart}
-            >Vaciar Carrito</button>
+          
+            <h1 id="cart-total">
+              {"TOTAL: $ " + new Intl.NumberFormat('en-US').format(total)}  
+            </h1>  
+            <div className="cart-finish">
+              <button 
+                className="btn btn-dark"
+                id="cart-clear"
+                onClick={deleteCart}
+              >Discard</button>
+              <button 
+                className="btn btn-dark"
+                id="cart-finish"
+                
+              >Finish</button>
+            </div>
           </div>
         ) : (<p>Your cart is empty 😐</p>)
       }

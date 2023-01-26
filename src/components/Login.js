@@ -62,7 +62,7 @@ export function Login() {
       </form>
       
       <div id="link-user">
-        <Link to="/register">Crear cuenta</Link>
+        <Link to="/register">Create Account</Link>
       </div>
     </div>
   );

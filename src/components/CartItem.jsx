@@ -16,7 +16,7 @@ const CartItem = ({ item, deleteCartById }) => {
                 <h2 className="cart-item-qty">{item.qty}</h2>
                 <h2 className="cart-item-name">{item.Model} by {item.Brand}</h2>
                 <h2 className="cart-item-subtotal">
-                    {"$" + new Intl.NumberFormat('en-US').format((item.qty * item.Price))}
+                    {"$ " + new Intl.NumberFormat('en-US').format((item.qty * item.Price))}
                 </h2>
             </div>
         </article>
