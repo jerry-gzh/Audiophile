@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import './scss/login.scss';
 
 export function Login() {
@@ -37,7 +37,7 @@ export function Login() {
   return (
     <div>
 
-      {error && <p>{error}</p>}
+      {error && <div id="error">{error}</div>}
 
       <form onSubmit={handleSubmit} className="form-wrap">
         <label htmlFor="email">Email:</label>
@@ -60,6 +60,10 @@ export function Login() {
 
         <button id="btn-form">Login</button>
       </form>
+      
+      <div id="link-user">
+        <Link to="/register">Crear cuenta</Link>
+      </div>
     </div>
   );
 }

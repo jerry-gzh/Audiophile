@@ -1,7 +1,7 @@
 .form-wrap{
   width: 35%;
   display: grid;
-  margin: 25vh 32.5%;
+  margin: 25vh 32.5% 0;
   font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.2rem;
   text-align: left;
@@ -25,4 +25,22 @@ input{
   width: 50%;
   margin: 20px 25% 0px;
   
+}
+
+#error{
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: rgba(255, 0, 0, 0.184);
+}
+
+#link-user{
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  a{
+    text-decoration: none;
+    color: #2e2e2e;
+  }
 }
