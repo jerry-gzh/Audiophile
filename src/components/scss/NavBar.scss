@@ -34,19 +34,19 @@
 
   li{
     padding: 4px 8px ;
+    &:hover {
+      background-color: black;
+      transition: 0.8s ease;
+      border-radius: 8px;
+    
+        a{
+          color: #e9e6e6;
+          font-weight: normal;
+        }
+    }
   }
 }
 
-.NB-center li:hover {
-  background-color: black;
-  transition: 0.8s ease;
-  border-radius: 5%;
-
-    a{
-      color: #e9e6e6;
-      font-weight: normal;
-    }
-}
 
 .NB-rigth{
   display: flex;

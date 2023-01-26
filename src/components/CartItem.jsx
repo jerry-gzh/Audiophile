@@ -9,13 +9,16 @@ const CartItem = ({ item, deleteCartById }) => {
             <div className="cart-item__delete" onClick={()=>deleteCartById(item.id)}>
                 {/* <FontAwesomeIcon icon={faTimes} color={'#1d1d1d'} size={'1x'}/> */}
             </div>
-            <div className="cart-item__img">
-                <img src={item.thumbnail}/>
+            <div className="cart-item-img">
+                <img src={item.Img_link}/>
             </div>
-            <h2 className="cart-item__name">{item.Model}</h2>
-            <span className="cart-item__price">${item.Price}</span>
-            <span className="cart-item__qty"><strong>Cantidad:</strong> {item.qty}</span>
-            <span className="cart-item__qty"><strong>Total:</strong> ${item.qty * item.Price}</span>
+            <div className="cart-item-info">
+                <h2 className="cart-item-qty">{item.qty}</h2>
+                <h2 className="cart-item-name">{item.Model} by {item.Brand}</h2>
+                <h2 className="cart-item-subtotal">
+                    {"$" + new Intl.NumberFormat('en-US').format((item.qty * item.Price))}
+                </h2>
+            </div>
         </article>
     )
 }

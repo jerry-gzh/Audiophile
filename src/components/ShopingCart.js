@@ -16,10 +16,11 @@ export function ShopingCart() {
 
   if (loading) return <h1>Loading...</h1>
 
-  return (<div>
-    <h1>Bienvenido {user.email}</h1>
-    <button onClick={handleLogout}>LogOut</button>
-    
+  return (<div >
+    <div className="user-band">
+      <h1> Welcome {user.email}</h1>
+      <button onClick={handleLogout}>LogOut</button>
+    </div>
 
     <section className="list-cart-container">
       {cart.length ? (
@@ -39,7 +40,7 @@ export function ShopingCart() {
               onClick={deleteCart}
             >Vaciar Carrito</button>
           </div>
-        ) : (<p>No haz añadido productos al carrito</p>)
+        ) : (<p>Your cart is empty 😐</p>)
       }
     </section>
   </div>);
