@@ -44,3 +44,13 @@ input{
     color: #2e2e2e;
   }
 }
+
+@media only screen and (max-width: 768px) {
+
+  .form-wrap{
+    width: 80%;
+    display: grid;
+    margin: 25vh 10% 0;
+
+  }
+}
