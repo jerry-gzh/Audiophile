@@ -91,17 +91,9 @@
 
 
 @media only screen and (max-width: 768px) {
-
   
   .Nav-Bar{
-    //background-color: rgb(163, 163, 163) ;
-    //font-family: 'Comfortaa', cursive;
-    display: flex;
-    //position: fixed;
     height: 50px;
-    //top: 100;
-    //width: 100%;
-    //z-index: 1;
   }
 
   .nav-lg{
@@ -121,31 +113,19 @@
   }
 
   .NB-rigth{
-    text-align: right;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    color: rgb(72, 72, 72);
     height: 50px;
     margin-right: 10px;
-    width:  auto;
-    padding: 0;
-  
+
     img, svg{
       height: 40px;
-      margin: 2px;
-  
-      &:hover{
-        filter: invert(100%) sepia(24%) saturate(2199%) 
-        hue-rotate(185deg) brightness(143%) contrast(81%);
-      }
-  
+      margin: 2px;  
     }
     svg{
       height: 45px;
-      width: auto;
-      color: black;
       margin-right: 0;
     }
   }
