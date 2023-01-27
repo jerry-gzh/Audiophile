@@ -4,6 +4,7 @@ import { useAuth } from "../context/authContext";
 import CartContext from "../context/cartContext";
 import './scss/NavBar.scss';
 import logo from "../resources/logo.png";
+import logo_s from "../resources/logo_s.png";
 import userLogo from "../resources/userLogo.png";
 import { BiCart } from 'react-icons/bi';
 
@@ -17,17 +18,20 @@ export default function NavBar() {
 
   return(
     <div className="Nav-Bar">
-      <div>
+      <div className="nav-lg">
         <Link to="/"><img src={logo} alt="Home"/></Link>
       </div>
+      <div className="nav-s">
+        <Link to="/"><img src={logo_s} alt="Home"/></Link>
+      </div>
       <ul className="NB-center">
-        <li>
+        <li className="shop">
           <Link to="/shop">Shop</Link>
         </li>
-        <li>
+        <li className="nav-lg">
           <Link to="/aboutus">About Us</Link>
         </li>
-        <li>
+        <li className="nav-lg">
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
