@@ -1,9 +1,51 @@
-import Cards from "./Cards";
+import Carousel from 'react-bootstrap/Carousel';
+import a from "../resources/1.png";
+import b from "../resources/2.png";
+import c from "../resources/3.png";
 
 export function Home() {
   return (
-    <div>
-      Lorem ipsum dolor sit amet. Eos quaerat sunt et dolorem earum quo quas cupiditate ut consequuntur autem sit consectetur doloremque. Est temporibus magni ab mollitia veritatis ut provident dolores hic nobis molestiae 33 voluptas molestiae ut eveniet perferendis. Eum quisquam earum et voluptas quia sed eaque velit sed delectus nulla aut nostrum harum. Et rerum amet est provident similique eum totam delectus aut quia quae sit repellat magnam et aspernatur voluptate.
-    </div>
+    
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-95"
+          src={a}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={b}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={c}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+    
   );
 }
