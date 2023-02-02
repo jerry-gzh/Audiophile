@@ -26,7 +26,7 @@ export default function NavBar() {
       </div>
       <ul className="NB-center">
         <li className="shop">
-          <Link to="/">Shop</Link>
+          <Link to="Audiophile/">Shop</Link>
         </li>
         <li className="nav-lg">
           <Link to="/aboutus">About Us</Link>
