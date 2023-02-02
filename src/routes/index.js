@@ -18,8 +18,8 @@ export default function AllRoutes() {
       <NavBar/>
       <div className="wrap-routes">
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/shop" element={<Shop/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/" element={<Shop/>} />
           <Route path="/aboutus" element={<AboutUs/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login" element={<Login/>} />

@@ -19,14 +19,14 @@ export default function NavBar() {
   return(
     <div className="Nav-Bar">
       <div className="nav-lg">
-        <Link to="/"><img src={logo} alt="Home"/></Link>
+        <Link to="/Home"><img src={logo} alt="Home"/></Link>
       </div>
       <div className="nav-s">
-        <Link to="/"><img src={logo_s} alt="Home"/></Link>
+        <Link to="/Home"><img src={logo_s} alt="Home"/></Link>
       </div>
       <ul className="NB-center">
         <li className="shop">
-          <Link to="/shop">Shop</Link>
+          <Link to="/">Shop</Link>
         </li>
         <li className="nav-lg">
           <Link to="/aboutus">About Us</Link>
