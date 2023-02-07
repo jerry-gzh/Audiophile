@@ -1,9 +1,33 @@
 import React from 'react'
+import "./scss/Aboutus.scss"
+import { BsFacebook, BsInstagram, BsTwitter, BsSnapchat} from "react-icons/bs";
 
 export  function Contact() {
   return (
-    <div>
-      Lorem ipsum dolor sit amet. Eos quaerat sunt et dolorem earum quo quas cupiditate ut consequuntur autem sit consectetur doloremque. Est temporibus magni ab mollitia veritatis ut provident dolores hic nobis molestiae 33 voluptas molestiae ut eveniet perferendis. Eum quisquam earum et voluptas quia sed eaque velit sed delectus nulla aut nostrum harum. Et rerum amet est provident similique eum totam delectus aut quia quae sit repellat magnam et aspernatur voluptate.
+    <div className='txt-container'>
+      <h1>Thank you for visiting our store!</h1>
+      <h2>
+      If you have any questions or comments, please don't hesitate to reach out to us.<br/>
+
+      Address: 123 Main St, Anytown, USA 12345<br/>
+
+      Phone: (123) 456-7890<br/>
+
+      Email: info@hifiheadphonesstore.com<br/>
+
+      Business Hours: Monday-Friday 9am-5pm EST<br/>
+
+      We look forward to hearing from you!<br/>
+
+      Follow us on social media for the latest updates and promotions:<br/>
+      
+      </h2>
+      <div id='sm'>
+        <BsFacebook/>
+        <BsInstagram/>
+        <BsTwitter/>
+        <BsSnapchat/>
+      </div>
     </div>
   )
 }

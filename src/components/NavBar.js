@@ -1,6 +1,5 @@
 import React, { useContext }  from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/authContext";
 import CartContext from "../context/cartContext";
 import './scss/NavBar.scss';
 import logo from "../resources/logo.png";

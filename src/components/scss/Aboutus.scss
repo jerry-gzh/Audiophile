@@ -1,0 +1,40 @@
+
+
+.txt-container{
+  width: 80%;
+  margin-top: 150px;
+  margin-left: 10%;
+  text-align: justify;
+  font-family: 'Comfortaa', cursive;
+  background-color: #e9e6e6;
+  padding: 25px;
+  border-radius: 15px;
+  h1{
+    font-size: 2rem;
+  } 
+  h2{
+    font-size: 1.4rem;
+  }
+}
+
+#sm{
+  display: flex;
+  font-size: 2rem;
+  gap: 5vw;
+  margin: 50px auto;
+  width: 30%;
+}
+
+@media only screen and (max-width: 768px){
+
+  .txt-container{
+    margin-top: 70px;
+
+    h1{
+      font-size: 1.2rem;
+    } 
+    h2{
+      font-size: 0.8rem;
+    }
+  }
+}
