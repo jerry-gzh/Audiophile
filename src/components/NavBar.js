@@ -29,10 +29,10 @@ export default function NavBar() {
           <Link to="Audiophile/">Shop</Link>
         </li>
         <li className="nav-lg">
-          <Link to="/aboutus">About Us</Link>
+          <Link to="Audiophile/aboutus">About Us</Link>
         </li>
         <li className="nav-lg">
-          <Link to="/contact">Contact</Link>
+          <Link to="Audiophile/contact">Contact</Link>
         </li>
       </ul>
       <ul className="NB-rigth" > 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
 import NavBar from "../components/NavBar";
 import { Home } from "../components/Home";
@@ -17,18 +17,18 @@ export default function AllRoutes() {
     <div>
       <NavBar/>
       <div className="wrap-routes">
-      
-        <Routes >
+      <Routes basename="/Audiophile">
+        
           <Route path="/home" element={<Home/>} />
           <Route path="Audiophile/" element={<Shop/>} />
-          <Route path="/aboutus" element={<AboutUs/>} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="Audiophile/aboutus" element={<AboutUs/>} />
+          <Route path="Audiophile/contact" element={<Contact/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path='/shopingCart' element={ <ProtectedRoute> <ShopingCart/> </ProtectedRoute> }/>
           <Route path="/item/:id" element={<Item/>} />
-        </Routes>
-      
+        
+      </Routes>
       </div>
     </div>
   )
