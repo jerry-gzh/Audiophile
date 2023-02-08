@@ -5,7 +5,8 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth"; //Métodos proporcionados por firebase
-import { auth } from "../firebase";
+import { auth, app } from "../firebase";
+import { getFirestore, doc, setDoc } from "firebase/firestore"; //Libreria BD CloudFirestore
 
 export const authContext = createContext();
 
@@ -18,12 +19,18 @@ export const useAuth = () => {
 
 //AuthProvider debe estar en los componentes que accederán a sus datos
 export function AuthProvider({ children }) {
+  
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const signup = (email, password) =>
-    createUserWithEmailAndPassword(auth, email, password);
+  const signup = async(email, password) => {
+    const res = await createUserWithEmailAndPassword(auth, email, password)// ⚠️ rol:"user"
+    console.log(res.user.uid);
 
+    const firestore = getFirestore(app);//Instrucciones BD CloudFirestore
+    const docuRef = doc(firestore, `usuarios/${res.user.uid}`)
+    setDoc(docuRef, {correo: email, rol: "user"})
+  }
   const login = async (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
 

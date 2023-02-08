@@ -6,7 +6,7 @@ import './scss/login.scss';
 export function Register() {
   const [user, setUser] = useState({
     email: "",
-    password: "",
+    password: "",// Verificar si aqui puedo agregar el rol por defecto
   });
 
   const { signup } = useAuth();
@@ -16,7 +16,7 @@ export function Register() {
   const handleChange = ({ target: { name, value } }) => {
     //🤖 Actualiza el estado
     setUser({ ...user, [name]: value });
-    //console.log(name, value);
+    console.log(name, value);
   };
 
   const handleSubmit = async (e) => {
@@ -24,7 +24,8 @@ export function Register() {
     setError('');
     try {
       await signup(user.email, user.password);
-      navigate("/");
+      navigate("/shopingCart");
+
     } catch (error) {
       console.log(error.code);
       if(error.code === "auth/invalid-email"){ //Se puede agregar validaciones
