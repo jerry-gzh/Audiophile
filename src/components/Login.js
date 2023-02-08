@@ -29,6 +29,8 @@ export function Login() {
       console.log(error.code);
       if(error.code === "auth/invalid-email"){ //Se puede agregar validaciones
         setError('Correo invalido 😐')
+      }if(error.code === "auth/user-not-found"){ //Se puede agregar validaciones
+        setError('Usuario no registrado')
       }
       //setError(error.message);
     }
