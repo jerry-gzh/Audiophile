@@ -7,7 +7,7 @@ import {
 } from "firebase/auth"; //Métodos proporcionados por firebase
 import { auth, app } from "../firebase";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore"; //Libreria BD CloudFirestore
-import { async } from "@firebase/util";
+
 
 const firestore = getFirestore(app);
 
@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
   const login = async (email, password) =>
     signInWithEmailAndPassword(auth, email, password);
 
-  const logout = () => signOut(auth);
+  const logout = () => {signOut(auth); setUser()};
 
   async function getROl(uid){
     const docuRef = doc(firestore, `usuarios/${uid}`)
@@ -47,19 +47,19 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
-      
-      getROl(currentUser.uid).then((rol) => {
-        const userData = {
-          uid: currentUser.uid,
-          email: currentUser.email,
-          rol:rol, 
-        };
-        setUser(userData);
-        console.log("userData final:", userData);
-        setLoading(false)
-      });
-      
-      
+      if (currentUser){
+        getROl(currentUser.uid).then((rol) => {
+          const userData = {
+            uid: currentUser.uid,
+            email: currentUser.email,
+            rol: rol, 
+          };
+          setUser(userData);
+          //console.log("userData final:", userData);
+          setLoading(false)
+        });
+        //console.log("user final:", user);
+      }
     });
   }, []);
 

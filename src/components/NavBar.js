@@ -6,13 +6,19 @@ import logo from "../resources/logo.png";
 import logo_s from "../resources/logo_s.png";
 import userLogo from "../resources/userLogo.png";
 import { BiCart } from 'react-icons/bi';
+import { useAuth } from "../context/authContext";
 
 
 
 export default function NavBar() {
   const cartContext = useContext(CartContext);
+  const { user } = useAuth()
   const { cart } = cartContext;
   const index = cart.length;
+  
+  if(user){
+    console.log(user);
+  }
   
 
   return(
@@ -33,6 +39,7 @@ export default function NavBar() {
         <li className="nav-lg">
           <Link to="Audiophile/contact">Contact</Link>
         </li>
+        
       </ul>
       <ul className="NB-rigth" > 
         <li>
